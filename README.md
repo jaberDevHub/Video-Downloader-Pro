@@ -4,6 +4,7 @@ A lightweight, 100% unlocked, privacy-focused media and video downloader for Chr
 
 ---
 
+
 ### Features
 
 - **Universal Media Detection:** Detects `.mp4`, `.webm`, `.m3u8` (HLS), `.mpd` (DASH), `.mkv`, `.mov`, and audio streams (`.mp3`, `.m4a`, `.aac`, `.flac`).
@@ -12,6 +13,8 @@ A lightweight, 100% unlocked, privacy-focused media and video downloader for Chr
 - **Anti-Hotlinking Engine:** Uses `declarativeNetRequest` to dynamically inject required `Referer` and `Origin` headers so CDN-protected streams don't throw 403 Forbidden errors.
 - **Zero Paywalls:** No daily download caps, no locked 1080p downloads, no cloud tracking, no accounts needed.
 - **Avant-Garde Dark Mode UI:** Glassmorphism interface with instant search, quality filtering, live thumbnail previews, and in-popup video player.
+
+<img src="https://i.ibb.co.com/39HLLGcP/video-downloader-pro.jpg" alt="video downloader pro" border="0"></a>
 
 ---
 
