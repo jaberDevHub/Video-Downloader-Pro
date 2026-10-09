@@ -26,6 +26,6 @@ A lightweight, 100% unlocked, privacy-focused media and video downloader for Chr
 3. Click the **Load unpacked** button in the top-left corner.
 4. Select the folder:
    ```text
-   E:\reverse\custom-video-downloader
+   \custom-video-downloader
    ```
 5. Done! Pin **Video Downloader Pro** to your toolbar and visit any site with videos.
