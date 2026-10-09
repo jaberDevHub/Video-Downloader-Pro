@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Downloader Pro</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Video Downloader</span>
+          <span class="brand-tag">PRO</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="rescanBtn" class="icon-btn" title="Re-scan page for media">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+          </svg>
+        </button>
+        <button id="clearBtn" class="icon-btn" title="Clear detected list">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="3 6 5 6 21 6"></polyline>
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Controls & Stats Bar -->
+    <div class="stats-bar">
+      <div class="detected-counter">
+        <span class="status-indicator"></span>
+        <span id="detectedCount">0</span> media found
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-tab" data-filter="playing">🟢 Playing</button>
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="video">Video</button>
+        <button class="filter-tab" data-filter="audio">Audio</button>
+      </div>
+    </div>
+
+    <!-- Search Input -->
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="searchInput" placeholder="Search detected videos..." />
+    </div>
+
+    <!-- Media Stream List -->
+    <main class="media-list" id="mediaList">
+      <!-- Dynamically populated media cards -->
+    </main>
+
+    <!-- Empty State -->
+    <div class="empty-state" id="emptyState">
+      <div class="radar-pulse">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <svg class="radar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+      </div>
+      <h3>No Media Streams Found Yet</h3>
+      <p>Play a video on the page or click below to trigger a deep scan.</p>
+      <button id="deepScanBtn" class="btn primary-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        Scan Active Page
+      </button>
+    </div>
+
+    <!-- Bottom Status Bar -->
+    <footer class="footer">
+      <div class="unlocked-badge">
+
+        <span class="">@jaberdevhub</span>
+      </div>
+      <button id="downloadAllBtn" class="download-all-btn hidden">
+        Download All (<span id="allCount">0</span>)
+      </button>
+    </footer>
+
+    <!-- Video Preview Modal -->
+    <div class="modal-overlay hidden" id="previewModal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <span id="previewTitle" class="modal-title">Video Preview</span>
+          <button id="closeModalBtn" class="icon-btn close-btn">✕</button>
+        </div>
+        <div class="modal-video-wrapper">
+          <video id="previewVideo" controls autoplay playsinline></video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
